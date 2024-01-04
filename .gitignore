@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyproj
+*.python-version
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# Flask
+instance/
+.webassets-cache
+
+# TensorFlow
+model/
+logs/
+
+# Tailwind CSS
+node_modules/
+.cache/
+dist/
+npm-debug.log*
+
+# Miscellaneous
+*.db
+*.sqlite
+*.log
+*.pot
+*.pyc
+*.swp
+*.swo
+*.ini
+*.env
+*.DS_Store

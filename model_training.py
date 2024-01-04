@@ -19,8 +19,8 @@ model = models.Sequential([
 ])
 
 model.compile(optimizer='adam',
-              loss='binary_crossentropy',
-              metrics=['accuracy'])
+          loss='binary_crossentropy',
+          metrics=['accuracy'])
 
 # Load and augment your dataset
 train_datagen = ImageDataGenerator(rescale=1./255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True)

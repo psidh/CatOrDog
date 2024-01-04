@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Image Classifier</title>
+  </head>
+  <body>
+    <div
+      class="flex flex-col justify-center items-center h-screen bg-gradient-to-r from-emerald-500 to-emerald-900"
+    >
+      <h1 class="text-6xl font-semibold text-white my-16">Image Classifier</h1>
+      <p class="text-lg text-white mb-8 mx-16">
+        Welcome to the Image Classifier web application! This project utilizes
+        machine learning to classify images as either dogs or cats. Upload an
+        image, and our trained model will make a prediction for you.
+      </p>
+      <form
+        action="/predict"
+        method="post"
+        enctype="multipart/form-data"
+        class="my-8"
+      >
+        <div class="flex flex-col items-center justify-center">
+          <input
+            title="file"
+            type="file"
+            name="file"
+            accept="image/*"
+            required
+          />
+          <button
+            type="submit"
+            class="px-8 py-2 rounded-lg bg-white text-black hover:bg-black hover:text-white my-8"
+          >
+            Predict
+          </button>
+        </div>
+      </form>
+      {% if result %}
+
+      <p class="text-xl text-white font-semibold mb-4">Result:</p>
+      <p class="text-lg text-white mb-16">{{ result }}</p>
+      {% endif %}
+      <div class="mx-16 my-8 text-justify">
+        <div class="text-sm text-white opacity-90">
+          <p>Technologies Used:</p>
+          <ul class="list-disc list-inside">
+            <li>Flask (Python Web Framework)</li>
+            <li>TensorFlow (Machine Learning Library)</li>
+            <li>Tailwind CSS (CSS Framework)</li>
+          </ul>
+          <p>Project Complexity: Moderate</p>
+          <p>
+            This project involves creating a web interface using Flask,
+            integrating a pre-trained machine learning model with TensorFlow,
+            and styling the application using Tailwind CSS.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
